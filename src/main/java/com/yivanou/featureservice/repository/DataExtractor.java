@@ -35,7 +35,6 @@ public class DataExtractor {
             return new String(FileCopyUtils.copyToByteArray(resource.getInputStream()), StandardCharsets.UTF_8);
         } catch (IOException e) {
             log.error("Unable to fetch data from file {}", fileName);
-            System.out.println(e.getMessage());
             e.printStackTrace();
         }
         return "";
@@ -53,7 +52,6 @@ public class DataExtractor {
                     );
         } catch (JsonProcessingException e) {
             log.error("Unable to deserialize data from file {}", fileName);
-            System.out.println(e.getMessage());
             e.printStackTrace();
         }
         return Collections.emptyMap();
