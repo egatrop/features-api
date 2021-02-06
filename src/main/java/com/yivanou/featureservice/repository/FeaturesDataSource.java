@@ -4,7 +4,9 @@ import com.yivanou.featureservice.repository.entity.Feature;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -14,6 +16,7 @@ import java.util.UUID;
 
 @Slf4j
 @RequiredArgsConstructor
+@Component
 public class FeaturesDataSource {
 
     private static final String DATA_SRC = "data/data.json";
@@ -23,7 +26,8 @@ public class FeaturesDataSource {
 
     private final Map<UUID, Feature> featuresToMap = new HashMap<>();
 
-    public void init() {
+    @PostConstruct
+    private void init() {
         log.info("Initializing data...");
         featuresToMap.putAll(extractor.extract(DATA_SRC));
     }
