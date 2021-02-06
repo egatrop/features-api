@@ -1,0 +1,32 @@
+[
+  {
+    "features": [
+      {
+        "properties": {
+          "id": "39c2f29e-c0f8-4a39-a98b-deed547d6aea",
+          "timestamp": 1554831167697,
+          "acquisition": {
+            "endViewingDate": 1554831202043,
+            "mission": "Sentinel-1",
+            "beginViewingDate": 1554831167697
+          }
+        }
+      }
+    ]
+  },
+  {
+    "features": [
+      {
+        "properties": {
+          "id": "",
+          "timestamp": 1554831167697,
+          "acquisition": {
+            "endViewingDate": 1554831202043,
+            "mission": "Sentinel-1",
+            "beginViewingDate": 1554831167697
+          }
+        }
+      }
+    ]
+  }
+]

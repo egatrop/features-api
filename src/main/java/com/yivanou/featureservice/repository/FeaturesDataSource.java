@@ -19,7 +19,7 @@ import java.util.UUID;
 @Component
 public class FeaturesDataSource {
 
-    private static final String DATA_SRC = "data/data.json";
+    private static final String DATA_SRC = "/data.json";
 
     @Autowired
     private DataExtractor extractor;

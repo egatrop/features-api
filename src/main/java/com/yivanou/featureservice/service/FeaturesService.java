@@ -32,7 +32,7 @@ public class FeaturesService {
         return mapper.entities2Dtos(dataSource.getAll());
     }
 
-    public byte[] getImageAsBase64(UUID id) {
+    public byte[] getImage(UUID id) {
         return dataSource.findById(id)
                 .filter(f -> f.getProperties().getQuicklook() != null)
                 .map(f -> Base64.getDecoder().decode(f.getProperties().getQuicklook()))

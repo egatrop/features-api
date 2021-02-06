@@ -47,7 +47,7 @@ public class FeaturesController {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.IMAGE_PNG);
 
-        return new ResponseEntity<>(service.getImageAsBase64(id), headers, HttpStatus.OK);
+        return new ResponseEntity<>(service.getImage(id), headers, HttpStatus.OK);
     }
 
     @ExceptionHandler(Throwable.class)
